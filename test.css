@@ -1,0 +1,159 @@
+/* (A) SUMMARY */
+/* (A1) WRAPPER */
+#summary {
+    display: grid;
+    grid-template-areas: "b b" "i e";
+    grid-gap: 10px;
+    padding: 20px;
+    font-weight: 700;
+    background: #1c5d95;
+  }
+  #balance, #income, #expense { padding: 10px; }
+  #balance { grid-area: b; }
+  #income { grid-area: i; }
+  #expense { grid-area: e; }
+  
+  /* (A2) BALANCE */
+  #balanceTxt { color: #7b9cd7; }
+  #balanceAmt {
+    font-size: 38px;
+    color: #fff;
+  }
+  
+  /* (A3) INCOME & EXPENSE */
+  #income, #expense {
+    border-radius: 10px;
+    background: #fff;
+  }
+  #incomeAmt, #expenseAmt { font-size: 28px; }
+  #incomeTxt { color: #92e7a1; }
+  #expenseTxt { color: #e5a5a5; }
+  #incomeAmt { color: #41b941; }
+  #expenseAmt { color: #d72f2f; }
+  
+  /* (B) ENTRIES LIST */
+  #entries { padding: 10px; }
+  #dummy, .eDel, .eEdit { cursor: pointer; }
+  #dummy, .entry {
+    border-radius: 15px;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  #dummy {
+    font-weight: 700;
+    color: #959595;
+    border: 3px dashed #d3d3d3;
+  }
+  .entry {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    font-size: 18px;
+  }
+  .eDel, .eTxt, .eAmt, .eEdit { padding: 0 10px; }
+  .eDel, .eAmt, .eEdit { font-weight: 700; }
+  .eDel { color: #d72f2f; }
+  .eTxt { flex-grow: 1; }
+  .eEdit, .income .eTxt, .expense .eTxt { color: #959595; }
+  .income .eAmt { color: #41b941; }
+  .expense .eAmt { color: #d72f2f; }
+  
+  /* (C) ITEM FORM */
+  #form {
+    /* (C1) FULLSCREEN */
+    position: fixed;
+    top: 0; left: 0; z-index: 999;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  
+    /* (C2) CENTERED CONTAINER */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    /* (C3) HIDDEN BY DEFAULT */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  /* (C4) SHOW FORM */
+  #form.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* (C5) FORM ITSELF */
+  #form form {
+    min-width: 400px;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    position: relative;
+  }
+  
+  /* (C6) FORM ELEMENTS */
+  #formEnd, #formGo { cursor: pointer; }
+  #formEnd {
+    position: absolute;
+    top: 0; right: 0;
+    padding: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #ab2020;
+  }
+  #form label, #form input, #form select {
+    display: block;
+    width: 100%;
+  }
+  #form label {
+    margin: 10px 0;
+    color: #b3b3b3;
+  }
+  #form input, #form select { padding: 15px; }
+  #formGo {
+    margin-top: 20px;
+    border: 0;
+    color: #fff;
+    background: #1f3e95;
+  }
+  
+  /* (X) DOES NOT MATTER */
+  /* PAGE & BODY */
+  * {
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(https://images.unsplash.com/photo-1573848855919-9abecc93e456?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NTc3Njk0NDA&ixlib=rb-1.2.1&q=80);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* WIDGET */
+  .widget-wrap {
+    width: 800px; 
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* FOOTER */
+  #code-boxx {
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  #code-boxx a {
+    display: inline-block;
+    border: 0;
+    padding: 5px;
+    text-decoration: none;
+    background: #b90a0a;
+    color: #fff;
+  }

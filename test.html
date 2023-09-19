@@ -1,0 +1,54 @@
+<div class="widget-wrap">
+    <h1>JS BUDGET PLANNER</h1>
+    
+    <!-- (A) SUMMARY -->
+    <div id="summary">
+      <!-- (A1) BALANCE -->
+      <div id="balance">
+        <div id="balanceTxt">Balance</div>
+        <div id="balanceAmt">$0</div>
+      </div>
+  
+      <!-- (A2) INCOME -->
+      <div id="income">
+        <div id="incomeTxt">Income</div>
+        <div id="incomeAmt">$0</div>
+      </div>
+  
+      <!-- (A3) EXPENSE -->
+      <div id="expense">
+        <div id="expenseTxt">Expense</div>
+        <div id="expenseAmt">$0</div>
+      </div>
+    </div>
+  
+    <!-- (B) ENTRIES LIST -->
+    <div id="entries">
+      <div id="dummy" onclick="bg.toggle(true)">New Entry</div>
+      <div id="list"></div>
+    </div>
+  
+    <!-- (C) ENTRY FORM -->
+    <div id="form"><form onsubmit="return bg.save()">
+      <div id="formEnd" onclick="bg.toggle(false)">X</div>
+      <input type="hidden" id="formID">
+      <label>Income/Expense</label>
+      <select id="formSign" required>
+        <option value="+">Income</option>
+        <option value="-">Expense</option>
+      </select>
+      <label>Description</label>
+      <input type="text" id="formTxt" required>
+      <label>Amount</label>
+      <input type="number" id="formAmt" step="0.01" required>
+      <input type="submit" value="Save" id="formGo">
+    </form></div>
+    
+    <!-- (X) VISIT CODE-BOXX -->
+    <div id="code-boxx">
+      Visit
+      <a href="https://code-boxx.com/simple-budget-planner-javascript/" target="_blank">
+        Code Boxx
+      </a> for more details.
+    </div>
+   </div>
